@@ -1,3 +1,3 @@
 # se-week06-site
 
-nibosi
+自己紹介のサイト
