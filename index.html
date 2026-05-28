@@ -1,7 +1,308 @@
-<!doctype html>
-<meta charset=
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Self Introduction</title>
 
-"utf-8">
-<title>自己紹介</title>
-<h1>自己紹介</h1>
-<p>授業で作成したページです。</p>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: #f4f6f9;
+      color: #222;
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, #2c3e50, #4ca1af);
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      opacity: 0.9;
+      font-size: 1rem;
+    }
+
+    nav {
+      background: white;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    nav li {
+      margin: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #4ca1af;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 900px;
+      margin: 40px auto;
+    }
+
+    section {
+      background: white;
+      margin-bottom: 30px;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: 0.7s ease;
+    }
+
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    section h2 {
+      margin-bottom: 20px;
+      color: #2c3e50;
+      border-left: 6px solid #4ca1af;
+      padding-left: 12px;
+      font-size: 1.5rem;
+    }
+
+    .skills-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 15px;
+    }
+
+    .skill-card {
+      background: #eef5f7;
+      padding: 15px;
+      text-align: center;
+      border-radius: 12px;
+      font-weight: bold;
+    }
+
+    .works-grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    .work-card {
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 20px;
+      transition: 0.3s;
+    }
+
+    .work-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+    }
+
+    .work-card h3 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: #666;
+      font-size: 0.9rem;
+    }
+
+    .top-button {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background: #4ca1af;
+      color: white;
+      border: none;
+      padding: 12px 16px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 18px;
+      display: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .top-button:hover {
+      background: #357d89;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 60px 15px;
+      }
+
+      header h1 {
+        font-size: 2rem;
+      }
+
+      section {
+        padding: 22px;
+      }
+
+      section h2 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>My Portfolio</h1>
+    <p>Information Systems Student / Web & Programming Learner</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#works">Works</a></li>
+      <li><a href="#reflection">Reflection</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+
+    <section id="about">
+      <h2>About</h2>
+      <p>
+        情報系分野を学んでいる学生です。<br>
+        プログラミングやデータ解析に興味があり勉強中です。
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+
+      <div class="skills-list">
+        <div class="skill-card">HTML / CSS</div>
+        <div class="skill-card">JavaScript</div>
+        <div class="skill-card">Python</div>
+        <div class="skill-card">C Language</div>
+        <div class="skill-card">SQL</div>
+        <div class="skill-card">Data Analysis</div>
+      </div>
+    </section>
+
+    <section id="works">
+      <h2>Works</h2>
+
+      <div class="works-grid">
+
+        <div class="work-card">
+          <h3>Portfolio Website</h3>
+          <p>
+            HTML・CSS・JavaScriptを用いて作成した
+            シンプルな自己紹介サイト。
+          </p>
+        </div>
+
+        <div class="work-card">
+          <h3>Data Analysis Practice</h3>
+          <p>
+            Pythonを利用してデータ分析や可視化を行い、
+            分類モデルの評価を学習。
+          </p>
+        </div>
+
+        <div class="work-card">
+          <h3>Embedded Systems Study</h3>
+          <p>
+            FreeRTOSやマイコン制御について学習し、
+            タスク管理や状態遷移を理解。
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="reflection">
+      <h2>Reflection</h2>
+
+      <p>
+        技術を学ぶ中で、単に動作するだけでなく、
+        「使いやすさ」や「分かりやすさ」を意識することの重要性を感じています。<br><br>
+
+        今後はWeb開発だけでなく、
+        ソフトウェア設計やUI/UXについても理解を深め、
+        より実用的な制作ができるよう成長していきたいです。
+      </p>
+    </section>
+
+  </div>
+
+  <footer>
+    © 2026 My Portfolio
+  </footer>
+
+  <button class="top-button" id="topBtn">↑</button>
+
+  <script>
+    const sections = document.querySelectorAll("section");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, {
+      threshold: 0.15
+    });
+
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+
+    const topBtn = document.getElementById("topBtn");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        topBtn.style.display = "block";
+      } else {
+        topBtn.style.display = "none";
+      }
+    });
+
+    topBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+  </script>
+
+</body>
+</html>
